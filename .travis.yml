@@ -10,16 +10,16 @@ script:
     - docker run ahmedou/react-test npm test -- --coverage
 
 after_success:
-    - docker build -t ahmedou/client ./client
-    - docker build -t ahmedou/nginx ./nginx
-    - docker build -t ahmedou/server ./server
-    - docker build -t ahmedou/worker ./worker
+    - docker build -t ahmedouyahya/client ./client
+    - docker build -t ahmedouyahya/nginx ./nginx
+    - docker build -t ahmedouyahya/server ./server
+    - docker build -t ahmedouyahya/worker ./worker
   
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
 
     # THIS IS A COMMENT
-    - docker push ahmedou/client
-    - docker push ahmedou/nginx
-    - docker push ahmedou/server
-    - docker push ahmedou/worker
+    - docker push ahmedouyahya/client
+    - docker push ahmedouyahya/nginx
+    - docker push ahmedouyahya/server
+    - docker push ahmedouyahya/worker
