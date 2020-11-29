@@ -17,6 +17,8 @@ after_success:
   
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
+
+    # THIS IS A COMMENT
     - docker push ahmedou/client
     - docker push ahmedou/nginx
     - docker push ahmedou/server
